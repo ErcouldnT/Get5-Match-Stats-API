@@ -6,7 +6,6 @@
 * `Get5_OnRoundStatsUpdated();`
 * `Get5_OnSeriesResult(MatchTeam seriesWinner, int team1MapScore, int team2MapScore);`
 * `Get5_OnDemoFinished(const char[] filename);`
-* ~~`Get5_GetTeamScores(MatchTeam team, int& seriesScore, int& currentMapScore);`~~
 
 2. Use [sm-json](https://github.com/clugg/sm-json) to change KeyValues to JSON
 
@@ -14,11 +13,28 @@
 
 4. First .smx release and testing
 
-## Must be installed
-* sm-json for encoding JSON
-* SteamWorks for http request
+### CVARs
+```
+get5_match_stats_api_url - Set's the server url to send the post request to.
+get5_match_stats_api_available - Checks if the plugin is correctly loaded on the server.
+```
 
-## Special thanks to
-* [splewis](https://github.com/splewis) ([get5](https://github.com/splewis/get5))
-* [clugg](https://github.com/clugg) ([sm-json](https://github.com/clugg/sm-json))
+### Server Requirements
+
+To use this plugin on your server, you must have the following:
+
+- [Get5](https://github.com/splewis/get5)
+- [SteamWorks](https://forums.alliedmods.net/showthread.php?t=229556)
+
+### Build Requirements
+
+To build the plugin, you must have the following:
+
+- [Get5](https://github.com/splewis/get5)
+- [SteamWorks](https://raw.githubusercontent.com/KyleSanderson/SteamWorks/master/Pawn/includes/SteamWorks.inc) for HTTP request
+- [sm-json](https://github.com/clugg/sm-json) for encoding JSON
+
+#### Special thanks to
+* [splewis](https://github.com/splewis) [(get5)](https://github.com/splewis/get5)
+* [clugg](https://github.com/clugg) [(sm-json)](https://github.com/clugg/sm-json)
 * *all contributors*
